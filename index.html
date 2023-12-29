@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img style="width: 100%; height: 500px; object-fit:contain;" id="myimg">
+<script>
+    var i=0
+    var image=[];
+    image[0]="img0.jpg";
+    image[1]="img2.jpg"
+    image[2]="img3.jpg"
+    image[3]="img4.jpg"
+    image[4]="img5.jpg"
+
+    function changeimg(){
+        document.getElementById('myimg').src=image[i]
+        if(i < image.length-1){
+            i++
+        }
+        else
+        {
+            i=0
+        }
+        setTimeout("changeimg()",1000)
+    
+    }
+
+
+
+changeimg()
+</script>
+</body>
+</html>
